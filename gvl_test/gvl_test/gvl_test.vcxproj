@@ -77,12 +77,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\mathx.cpp" />
+    <ClCompile Include="..\..\randomx.cpp" />
     <ClCompile Include="..\..\vector2.cpp" />
     <ClCompile Include="..\..\vector3.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\mathx.h" />
+    <ClInclude Include="..\..\randomx.h" />
     <ClInclude Include="..\..\vector2.h" />
     <ClInclude Include="..\..\vector3.h" />
   </ItemGroup>

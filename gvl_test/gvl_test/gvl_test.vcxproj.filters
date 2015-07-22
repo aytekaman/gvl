@@ -26,6 +26,9 @@
     <ClCompile Include="..\..\mathx.cpp">
       <Filter>gvl</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\randomx.cpp">
+      <Filter>gvl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vector2.h">
@@ -35,6 +38,9 @@
       <Filter>gvl</Filter>
     </ClInclude>
     <ClInclude Include="..\..\mathx.h">
+      <Filter>gvl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\randomx.h">
       <Filter>gvl</Filter>
     </ClInclude>
   </ItemGroup>

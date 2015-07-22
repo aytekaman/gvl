@@ -1,7 +1,5 @@
 #include "vector3.h"
 
-#include <math.h>
-
 #include "mathx.h"
 #include "vector2.h"
 

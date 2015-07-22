@@ -1,6 +1,6 @@
 #include "vector2.h"
 
-#include <math.h>
+#include <cmath>
 
 #include "mathx.h"
 #include "vector3.h"
