@@ -12,9 +12,9 @@ struct Vector3
 	float& operator[](int i);
 	const float& operator[](int i) const; 
 	
-	Vector3 GetNormalized() const;
-	float GetLength() const;
-	float GetSquaredLength() const;
+	Vector3 Normalized() const;
+	float Length() const;
+	float SquaredLength() const;
 
 	void Set(float x, float y, float z);
 

@@ -22,19 +22,19 @@ const float& Vector3::operator[](int i) const
 	return (&x)[i];
 }
 	
-Vector3 Vector3::GetNormalized() const
+Vector3 Vector3::Normalized() const
 {
-	float s = 1 / GetLength();
+	float s = 1 / Length();
 
 	return *this * s;
 }
 
-float Vector3::GetLength() const
+float Vector3::Length() const
 {
-	return sqrt(GetSquaredLength());
+	return sqrt(SquaredLength());
 }
 
-float Vector3::GetSquaredLength() const
+float Vector3::SquaredLength() const
 {
 	return x*x + y*y + z*z;
 }
@@ -48,7 +48,7 @@ void Vector3::Set(float _x, float _y, float _z)
 
 void Vector3::Normalize()
 {
-	float s = 1 / GetLength();
+	float s = 1 / Length();
 
 	*this = *this * s;
 }
@@ -187,7 +187,7 @@ Vector3 operator*(float s, const Vector3& v)
 
 float Vector3::Angle(const Vector3 &from, const Vector3 &to)
 {
-	return acos(Dot(from, to) / (from.GetLength() * to.GetLength())) * Mathx::rad2deg;
+	return acos(Dot(from, to) / (from.Length() * to.Length())) * Mathx::rad2deg;
 }
 
 Vector3	Vector3::Cross(const Vector3 &a, const Vector3 &b)
@@ -197,7 +197,7 @@ Vector3	Vector3::Cross(const Vector3 &a, const Vector3 &b)
 
 float Vector3::Distance(const Vector3 &a, const Vector3 &b)
 {
-	return (a - b).GetLength();
+	return (a - b).Length();
 }
 
 float Vector3::Dot(const Vector3 &a, const Vector3 &b)

@@ -1,6 +1,5 @@
 #include "randomx.h"
 
-//#include <cstdlib>
 #include <cmath>
 
 #include "mathx.h"
@@ -44,7 +43,7 @@ Vector3 Randomx::InsideUnitSphere()
 {
 	Vector3 r(Range(0.0f, 1.0f), Range(0.0f, 1.1f), Range(0.0f, 1.1f));
 
-	while(r.GetSquaredLength() > 1)
+	while(r.SquaredLength() > 1)
 	{
 		r.Set(Range(0.0f, 1.0f), Range(0.0f, 1.1f), Range(0.0f, 1.1f));
 	}
@@ -56,7 +55,7 @@ Vector2 Randomx::InsideUnitCircle()
 {
 	Vector2 r(Range(0.0f, 1.0f), Range(0.0f, 1.1f));
 
-	while(r.GetSquaredLength() > 1)
+	while(r.SquaredLength() > 1)
 	{
 		r.Set(Range(0.0f, 1.0f), Range(0.0f, 1.1f));
 	}
@@ -66,7 +65,7 @@ Vector2 Randomx::InsideUnitCircle()
 
 Vector3 Randomx::OnUnitSphere()
 {
-	return Vector3(Gaussian(), Gaussian(), Gaussian()).GetNormalized();
+	return Vector3(Gaussian(), Gaussian(), Gaussian()).Normalized();
 }
 
 Vector2 Randomx::OnUnitCircle()
@@ -76,16 +75,4 @@ Vector2 Randomx::OnUnitCircle()
 	return Vector2(cos(angle), sin(angle));
 }
 
-void Randomx::SetSeed(unsigned int _seed)
-{
-	seed = _seed;
-	srand(seed);
-}
-
-unsigned int Randomx::GetSeed()
-{
-	return seed;
-}
-
 bool Randomx::toggle = false;
-unsigned int Randomx::seed = 0;

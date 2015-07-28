@@ -24,19 +24,19 @@ const float& Vector2::operator[](int i) const
 	return (&x)[i]; 
 }
 	
-Vector2 Vector2::GetNormalized() const
+Vector2 Vector2::Normalized() const
 {
-	float s = 1 / GetLength();
+	float s = 1 / Length();
 
 	return *this * s;
 }
 
-float Vector2::GetLength() const
+float Vector2::Length() const
 {
-	return sqrt(GetSquaredLength());
+	return sqrt(SquaredLength());
 }
 
-float Vector2::GetSquaredLength() const
+float Vector2::SquaredLength() const
 {
 	return x*x + y*y;
 }
@@ -49,7 +49,7 @@ void Vector2::Set(float _x, float _y)
 
 void Vector2::Normalize()
 {
-	float s = 1 / GetLength();
+	float s = 1 / Length();
 
 	*this = *this * s;
 }
@@ -180,7 +180,7 @@ Vector2 operator*(float s, const Vector2& v)
 
 float Vector2::Angle(const Vector2 &from, const Vector2 &to)
 {
-	return acos(Dot(from, to) / (from.GetLength() * to.GetLength())) * Mathx::rad2deg;
+	return acos(Dot(from, to) / (from.Length() * to.Length())) * Mathx::rad2deg;
 }
 
 float Vector2::Cross(const Vector2 &a, const Vector2 &b)
@@ -190,7 +190,7 @@ float Vector2::Cross(const Vector2 &a, const Vector2 &b)
 
 float Vector2::Distance(const Vector2 &a, const Vector2 &b)
 {
-	return (a - b).GetLength();
+	return (a - b).Length();
 }
 
 float Vector2::Dot(const Vector2 &a, const Vector2 &b)

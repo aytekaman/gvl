@@ -17,10 +17,6 @@ public:
 	static Vector3	OnUnitSphere();
 	static Vector2	OnUnitCircle();
 
-	static void		SetSeed(unsigned int seed);
-	static unsigned int	GetSeed();
-
 private:
 	static bool		toggle;
-	static unsigned int	seed;
 };

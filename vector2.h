@@ -12,9 +12,9 @@ struct Vector2
 	float& operator[](int i);
 	const float& operator[](int i) const;
 	
-	Vector2 GetNormalized() const;
-	float GetLength() const;
-	float GetSquaredLength() const;
+	Vector2 Normalized() const;
+	float Length() const;
+	float SquaredLength() const;
 
 	void Set(float x, float y);
 
